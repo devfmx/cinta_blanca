@@ -36,12 +36,8 @@ function frasePalindromo(){
 
   //Quitamos espacios
   frase = frase.replace(/\s/g,"");
-  // Creamos fraseReversa convirtiendo la frase  original en array, le damos la vuelta al array y lo convertimos a string
-  fraseReversa=frase.split("").reverse().toString();
-  // Le quitamos las "," con un replace dentro del for
-  for (var i = 0; i < fraseReversa.length; i++) {
-    fraseReversa=fraseReversa.replace(",","");
-  };
+  // Creamos fraseReversa convirtiendo la frase  original en array, le damos la vuelta al array y juntamos todos los caracteres (al crearse el arreglo los caracteres son separados por comas "," ver console.log(frase))
+  fraseReversa=frase.split("").reverse().join("");
 
   // Comparamos las dos frases.
   if(frase==fraseReversa){
